@@ -1,0 +1,52 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$background-color: #c7d0d1;
+.welcome-title {
+  font-family: arial, sans-serif;
+  background-color: $background-color;
+  margin: 1em 0;
+  border: 1px solid gold;
+}
+
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  background-color: #666666;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.p2 {
+  @extend %message-shared;
+
+  &:hover{
+    text-decoration: underline;
+  }
+
+}
+
+@mixin wrapping() {
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  border-radius: 20px;
+  padding-bottom: 30px;
+  max-width: 450px;
+  min-height: 700px;
+  position: relative;
+  background-color: #343a40;
+  /*background: rgba(40,57,101,.9);*/
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.login-wrapping {
+  @include wrapping();
+}

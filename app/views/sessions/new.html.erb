@@ -1,0 +1,24 @@
+<div class="container">
+  <% provide :title, 'Login up' %>
+  <h1> Log In</h1>
+
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.label :email %>
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <%= f.text_field :email, class: 'form-control' %><br/>
+          </div>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %><br/>
+
+        <%= f.submit("Log In", class: 'btn btn-primary')  %>
+      <% end %><br/>
+      <p> Don't have an account, Click <%= link_to "here", signup_path %> to register</p>
+    </div>
+
+  </div>
+</div>
